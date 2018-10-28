@@ -10,9 +10,11 @@
 <a routerLink="/add-device">Add new device</a>
 
 <button class="btn btn-primary" (click)="openModal(editmodal)" style="margin: 2px; width: 30%;">Edit</button>
+<div class="row"> 
+  <app-device-card class="column"></app-device-card>
+  <app-device-card class="column"></app-device-card>
+</div>
 
-<app-device-card></app-device-card>
-<app-device-card></app-device-card>
 <ng-template #editmodal>
 <app-add-device-modal></app-add-device-modal>
 </ng-template>

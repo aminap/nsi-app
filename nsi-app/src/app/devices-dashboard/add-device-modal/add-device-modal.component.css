@@ -1,0 +1,8 @@
+input, select {
+    width: 75%
+}
+
+button {
+    margin-right: 25px;
+    margin-bottom: 25px;
+}

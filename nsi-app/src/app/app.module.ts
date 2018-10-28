@@ -14,6 +14,8 @@ import { AddDeviceTypeModalComponent } from './device-types-dashboard/add-device
 import { EditDeviceTypeModalComponent } from './device-types-dashboard/edit-device-type-modal/edit-device-type-modal.component';
 import { DeleteDeviceTypeModalComponent } from './device-types-dashboard/delete-device-type-modal/delete-device-type-modal.component';
 
+import { ModalModule } from 'ngx-bootstrap';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +32,8 @@ import { DeleteDeviceTypeModalComponent } from './device-types-dashboard/delete-
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ModalModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

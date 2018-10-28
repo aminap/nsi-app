@@ -1,3 +1,17 @@
-<p>
-  device-card works!
-</p>
+<div class="card program-item" [routerLink]="">
+  <div class="program-card-block">
+    <img class="background" [src]="'https://www.gude.info/fileadmin/user_upload/products/monitoring/7213-7214/esb7213.png'" alt="placeholder">
+    <div class="program-info-block">
+      <h5 class="card-title" [title]="Device1">
+        Device1
+      </h5>
+      <label class="card-text">DVC</label>
+    </div>
+    <div style="position: absolute; bottom: 5px; right: 20px;" class="user-count">
+      <div class="row">
+        <label class="card-text">10</label>
+        <i class="fa fa-file-text-o" style="padding-right:10px;" aria-hidden="true"></i>
+      </div>
+    </div>
+  </div>
+</div>

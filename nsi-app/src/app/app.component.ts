@@ -1,6 +1,4 @@
-import { Component, TemplateRef } from '@angular/core';
-import { BsModalService, BsModalRef } from 'ngx-bootstrap';
-
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -8,15 +6,5 @@ import { BsModalService, BsModalRef } from 'ngx-bootstrap';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'nsi-app';
-  modalRef: BsModalRef
-
-  constructor( private modalService: BsModalService){
-    
-  }
-
-  openModal(template: TemplateRef<any>) {
-    this.modalRef = this.modalService.show(template, { class: 'modal-lg' });
-  }
-  
+  title = 'nsi-app';  
 }

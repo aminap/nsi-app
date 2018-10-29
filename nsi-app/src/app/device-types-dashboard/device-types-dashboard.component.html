@@ -8,18 +8,18 @@
     <div class="col-md-12">
       <div class="row">
         <div class="col-md-8 col-sm-8 col-xs-12">
-            <button class="btn btn-primary" (click)="openModal(addmodal)">Add new device type</button>
+          <button class="btn btn-primary" (click)="openModal(addmodal)">Add new device type</button>
         </div>
         <div class="col-md-4 col-sm-4 col-xs-12">
-          <div id="imaginary_container"> 
-              <div class="input-group float-right stylish-input-group">
-                  <input type="text" class="form-control"  placeholder="Search">
-                  <span class="input-group-addon">
-                      <button type="submit">
-                          <span class="glyphicon glyphicon-search"></span>
-                      </button>  
-                  </span>
-              </div>
+          <div id="imaginary_container">
+            <div class="input-group float-right stylish-input-group">
+              <input type="text" class="form-control" placeholder="Search">
+              <span class="input-group-addon">
+                <button type="submit">
+                  <span class="glyphicon glyphicon-search"></span>
+                </button>
+              </span>
+            </div>
           </div>
         </div>
       </div>
@@ -40,20 +40,32 @@
           <tr>
             <td>Ime</td>
             <td>Opis</td>
-            <td><a (click)="openModal(editmodal)">Edit</a></td>
-            <td><a routerLink="/delete-device-type-modal">Delete</a></td>
+            <td>
+              <a (click)="openModal(editmodal)">Edit</a>
+            </td>
+            <td>
+              <a routerLink="/delete-device-type-modal">Delete</a>
+            </td>
           </tr>
           <tr>
             <td>Ime</td>
             <td>Opis</td>
-            <td><a (click)="openModal(editmodal)">Edit</a></td>
-            <td><a routerLink="/delete-device-type-modal">Delete</a></td>
+            <td>
+              <a (click)="openModal(editmodal)">Edit</a>
+            </td>
+            <td>
+              <a routerLink="/delete-device-type-modal">Delete</a>
+            </td>
           </tr>
           <tr>
             <td>Ime</td>
             <td>Opis</td>
-            <td><a (click)="openModal(editmodal)">Edit</a></td>
-            <td><a routerLink="/delete-device-type-modal">Delete</a></td>
+            <td>
+              <a (click)="openModal(editmodal)">Edit</a>
+            </td>
+            <td>
+              <a routerLink="/delete-device-type-modal">Delete</a>
+            </td>
           </tr>
         </tbody>
       </table>
@@ -63,22 +75,40 @@
 
     <div class="col-md-12 col-sm-12 col-xs-12">
       <ul class="pagination pull-right">
-        <li class="disabled"><a href="#"><span class="glyphicon glyphicon-chevron-left"></span></a></li>
-        <li class="active"><a href="#">1</a></li>
-        <li><a href="#">2</a></li>
-        <li><a href="#">3</a></li>
-        <li><a href="#">4</a></li>
-        <li><a href="#">5</a></li>
-        <li><a href="#"><span class="glyphicon glyphicon-chevron-right"></span></a></li>
+        <li class="disabled">
+          <a href="#">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+          </a>
+        </li>
+        <li class="active">
+          <a href="#">1</a>
+        </li>
+        <li>
+          <a href="#">2</a>
+        </li>
+        <li>
+          <a href="#">3</a>
+        </li>
+        <li>
+          <a href="#">4</a>
+        </li>
+        <li>
+          <a href="#">5</a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+          </a>
+        </li>
       </ul>
     </div>
   </div>
 </div>
 
 <ng-template #addmodal>
-    <app-add-device-type-modal></app-add-device-type-modal>
+  <app-add-device-type-modal (closeClick)="hideModal($event)"></app-add-device-type-modal>
 </ng-template>
 
 <ng-template #editmodal>
-    <app-edit-device-type-modal></app-edit-device-type-modal>
+  <app-edit-device-type-modal (closeClick)="hideModal($event)"></app-edit-device-type-modal>
 </ng-template>

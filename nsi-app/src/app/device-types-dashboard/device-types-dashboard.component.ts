@@ -18,7 +18,8 @@ export class DeviceTypesDashboardComponent implements OnInit {
     this.modalRef = this.modalService.show(template, { class: 'modal-lg' });
   }
 
-  hideModal() {
-    this.modalRef.hide()
+  hideModal(clicked) {
+    if (clicked == true)
+      this.modalRef.hide()
   }
 }

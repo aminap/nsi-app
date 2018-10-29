@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { Device }    from 'src/app/device';
-import {Location} from '@angular/common';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { Device } from 'src/app/device';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-add-device-modal',
@@ -11,9 +11,12 @@ export class AddDeviceModalComponent implements OnInit {
 
   types = ['light sensor', 'temperature sensor', 'motion sensor', 'door sensor', 'window sensor'];
 
-  model = new Device(1,'Philips Hue White',this.types[0],'smart bulb');
+  model = new Device(42, '', '', ''); //new Device(1,'Philips Hue White',this.types[0],'smart bulb');
 
   submitted = false;
+
+  @Output()
+  public closeClick: EventEmitter<boolean> = new EventEmitter<boolean>();
 
   constructor(private _location: Location) { }
 
@@ -23,11 +26,11 @@ export class AddDeviceModalComponent implements OnInit {
   onSubmit() { this.submitted = true; }
 
   newDevice() {
-    this.model = new Device(42, '', '','');
+    this.model = new Device(1, 'Philips Hue White', this.types[0], 'smart bulb');//new Device(42, '', '','');
   }
 
-  backClicked() {
-    this._location.back();
-}
+  onClose() {
+    this.closeClick.emit(true);
+  }
 
 }

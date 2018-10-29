@@ -9,7 +9,7 @@ import { BsModalService, BsModalRef } from 'ngx-bootstrap';
 export class DevicesDashboardComponent implements OnInit {
   modalRef: BsModalRef
 
-  constructor( private modalService: BsModalService){
+  constructor(private modalService: BsModalService) {
   }
 
   ngOnInit() {
@@ -19,4 +19,13 @@ export class DevicesDashboardComponent implements OnInit {
     this.modalRef = this.modalService.show(template, { class: 'modal-lg' });
   }
 
+  hideModal(clicked) {
+    if (clicked == true)
+      this.modalRef.hide()
+  }
+
+  openEditModal(clicked, template: TemplateRef<any>) {
+    if (clicked == true)
+      this.modalRef = this.modalService.show(template, { class: 'modal-lg' });
+  }
 }

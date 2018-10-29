@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule }   from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,6 +15,7 @@ import { EditDeviceTypeModalComponent } from './device-types-dashboard/edit-devi
 import { DeleteDeviceTypeModalComponent } from './device-types-dashboard/delete-device-type-modal/delete-device-type-modal.component';
 
 import { ModalModule } from 'ngx-bootstrap';
+import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { ModalModule } from 'ngx-bootstrap';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ModalModule.forRoot()
+    ModalModule.forRoot(),
+    NgMultiSelectDropDownModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

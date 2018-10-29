@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { Device } from 'src/app/device';
+import {Location} from '@angular/common';
 
 @Component({
   selector: 'app-edit-device-modal',
@@ -7,9 +9,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EditDeviceModalComponent implements OnInit {
 
-  constructor() { }
+  types = ['light sensor', 'temperature sensor', 'motion sensor', 'door sensor', 'window sensor'];
+
+  model = new Device(1,'Philips Hue White',this.types[0],'smart bulb');
+
+  submitted = false;
+
+  @Output()
+  public closeClick: EventEmitter<boolean> = new EventEmitter<boolean>();
+
+  constructor(private _location: Location) { }
 
   ngOnInit() {
+  }
+
+  onSubmit() { this.submitted = true; }
+
+  onClose() {
+    this.closeClick.emit(true);
   }
 
 }

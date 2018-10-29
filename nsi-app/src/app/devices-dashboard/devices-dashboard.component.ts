@@ -18,5 +18,4 @@ export class DevicesDashboardComponent implements OnInit {
   openModal(template: TemplateRef<any>) {
     this.modalRef = this.modalService.show(template, { class: 'modal-lg' });
   }
-
 }

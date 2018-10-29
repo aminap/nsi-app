@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Device }    from 'src/app/device';
 import {Location} from '@angular/common';
+
 @Component({
   selector: 'app-add-device-modal',
   templateUrl: './add-device-modal.component.html',
@@ -13,8 +14,6 @@ export class AddDeviceModalComponent implements OnInit {
   model = new Device(1,'Philips Hue White',this.types[0],'smart bulb');
 
   submitted = false;
-
-
 
   constructor(private _location: Location) { }
 

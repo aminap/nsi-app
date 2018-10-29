@@ -1,14 +1,19 @@
-<div class="row">
-  <h2>Device types</h2>
-  <div class="col-md-10 col-md-offset-1">
-    <div class="col-md-6">
-        <button class="btn btn-primary" routerLink="/add-device-type-modal" style="margin: 2px; width: 30%;">Add new device type</button>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+      <h2>Device types</h2>
+      <hr />
     </div>
-    <div class="col-md-6">
-      <div class="col-md-6 col-md-offset-6">
+
+    <div class="col-md-12">
+      <div class="row">
+        <div class="col-md-8 col-sm-8 col-xs-12">
+            <button class="btn btn-primary" (click)="openModal(addmodal)">Add new device type</button>
+        </div>
+        <div class="col-md-4 col-sm-4 col-xs-12">
           <div id="imaginary_container"> 
-              <div class="input-group stylish-input-group">
-                  <input type="text" class="form-control"  placeholder="Search" >
+              <div class="input-group float-right stylish-input-group">
+                  <input type="text" class="form-control"  placeholder="Search">
                   <span class="input-group-addon">
                       <button type="submit">
                           <span class="glyphicon glyphicon-search"></span>
@@ -16,58 +21,64 @@
                   </span>
               </div>
           </div>
+        </div>
       </div>
+
+      <hr />
+    </div>
+    <div class="col-md-12 col-sm-12 col-xs-12">
+      <table class="table table-bordered table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Description</th>
+            <th scope="col">Edit</th>
+            <th scope="col">Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Ime</td>
+            <td>Opis</td>
+            <td><a (click)="openModal(editmodal)">Edit</a></td>
+            <td><a routerLink="/delete-device-type-modal">Delete</a></td>
+          </tr>
+          <tr>
+            <td>Ime</td>
+            <td>Opis</td>
+            <td><a (click)="openModal(editmodal)">Edit</a></td>
+            <td><a routerLink="/delete-device-type-modal">Delete</a></td>
+          </tr>
+          <tr>
+            <td>Ime</td>
+            <td>Opis</td>
+            <td><a (click)="openModal(editmodal)">Edit</a></td>
+            <td><a routerLink="/delete-device-type-modal">Delete</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="clearfix"></div>
+
+    <div class="col-md-12 col-sm-12 col-xs-12">
+      <ul class="pagination pull-right">
+        <li class="disabled"><a href="#"><span class="glyphicon glyphicon-chevron-left"></span></a></li>
+        <li class="active"><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-chevron-right"></span></a></li>
+      </ul>
     </div>
   </div>
-  <div class="col-md-10 col-md-offset-1">
-    <table class="table">
-      <thead>
-        <tr>
-          <th scope="col">Name</th>
-          <th scope="col">Description</th>
-          <th scope="col">Edit</th>
-          <th scope="col">Delete</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Ime</td>
-          <td>Opis</td>
-          <td><a routerLink="/edit-device-type-modal">Edit</a></td>
-          <td><a routerLink="/delete-device-type-modal">Delete</a></td>
-        </tr>
-        <tr>
-          <td>Ime</td>
-          <td>Opis</td>
-          <td><a routerLink="/edit-device-type-modal">Edit</a></td>
-          <td><a routerLink="/delete-device-type-modal">Delete</a></td>
-        </tr>
-        <tr>
-          <td>Ime</td>
-          <td>Opis</td>
-          <td><a routerLink="/edit-device-type-modal">Edit</a></td>
-          <td><a routerLink="/delete-device-type-modal">Delete</a></td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-
-
-  <div class="clearfix"></div>
-
-  <div class="col-md-11">
-    <ul class="pagination pull-right">
-      <li class="disabled"><a href="#"><span class="glyphicon glyphicon-chevron-left"></span></a></li>
-      <li class="active"><a href="#">1</a></li>
-      <li><a href="#">2</a></li>
-      <li><a href="#">3</a></li>
-      <li><a href="#">4</a></li>
-      <li><a href="#">5</a></li>
-      <li><a href="#"><span class="glyphicon glyphicon-chevron-right"></span></a></li>
-    </ul>
-  </div>
-
-
-
 </div>
+
+<ng-template #addmodal>
+    <app-add-device-type-modal></app-add-device-type-modal>
+</ng-template>
+
+<ng-template #editmodal>
+    <app-edit-device-type-modal></app-edit-device-type-modal>
+</ng-template>

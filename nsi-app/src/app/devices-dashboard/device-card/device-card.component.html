@@ -1,4 +1,9 @@
-<div class="card program-item" [routerLink]="">
+<div class="card program-item" [routerLink]="" >
+  <div class="buttons-card col-sm-2">
+      <button type="button"class="button button5" (click)="onEditClick()"><span class="glyphicon glyphicon-edit"></span></button>
+      <button type="button" class="button button5"><span class="glyphicon glyphicon-remove"></span></button>
+  </div>
+  <div class="col-sm-10">
   <div class="program-card-block">
     <img class="background" [src]="'https://www.gude.info/fileadmin/user_upload/products/monitoring/7213-7214/esb7213.png'" alt="placeholder">
     <div class="program-info-block">
@@ -12,6 +17,5 @@
       <hr class="hr-success" />
     </div>
   </div>
-  <button class="glyphicon glyphicon-edit" (click)="onEditClick()"></button>
-  <button class="glyphicon glyphicon-remove"></button>
+</div>
 </div>

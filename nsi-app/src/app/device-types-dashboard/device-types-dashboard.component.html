@@ -38,33 +38,45 @@
         </thead>
         <tbody>
           <tr>
-            <td>Ime</td>
-            <td>Opis</td>
+            <td>Name</td>
+            <td>Description</td>
             <td>
-              <a (click)="openModal(editmodal)">Edit</a>
+              <button type="button" class="btn btn-default btn-sm" (click)="openModal(editmodal)">
+                <span class="glyphicon glyphicon-trash"></span> Edit
+              </button>
             </td>
             <td>
-              <a routerLink="/delete-device-type-modal">Delete</a>
-            </td>
-          </tr>
-          <tr>
-            <td>Ime</td>
-            <td>Opis</td>
-            <td>
-              <a (click)="openModal(editmodal)">Edit</a>
-            </td>
-            <td>
-              <a routerLink="/delete-device-type-modal">Delete</a>
+              <button type="button" class="btn btn-danger btn-sm" routerLink="/delete-device-type-modal">
+                <span class="glyphicon glyphicon-trash"></span> Delete
+              </button>
             </td>
           </tr>
           <tr>
-            <td>Ime</td>
-            <td>Opis</td>
+            <td>Name</td>
+            <td>Description</td>
             <td>
-              <a (click)="openModal(editmodal)">Edit</a>
+              <button type="button" class="btn btn-default btn-sm" (click)="openModal(editmodal)">
+                <span class="glyphicon glyphicon-trash"></span> Edit
+              </button>
             </td>
             <td>
-              <a routerLink="/delete-device-type-modal">Delete</a>
+              <button type="button" class="btn btn-danger btn-sm" routerLink="/delete-device-type-modal">
+                <span class="glyphicon glyphicon-trash"></span> Delete
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td>Name</td>
+            <td>Description</td>
+            <td>
+              <button type="button" class="btn btn-default btn-sm" (click)="openModal(editmodal)">
+                <span class="glyphicon glyphicon-trash"></span> Edit
+              </button>
+            </td>
+            <td>
+              <button type="button" class="btn btn-danger btn-sm" routerLink="/delete-device-type-modal">
+                <span class="glyphicon glyphicon-trash"></span> Delete
+              </button>
             </td>
           </tr>
         </tbody>

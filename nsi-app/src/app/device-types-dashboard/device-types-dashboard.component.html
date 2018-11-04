@@ -34,19 +34,19 @@
           <td>Ime</td>
           <td>Opis</td>
           <td><a routerLink="/edit-device-type-modal">Edit</a></td>
-          <td><a routerLink="/delete-device-type-modal">Delete</a></td>
+          <td><button class="btn btn-danger" (click)="openModal(deletetype)" style="margin: 2px; width: 30%;">Delete</button></td>
         </tr>
         <tr>
           <td>Ime</td>
           <td>Opis</td>
           <td><a routerLink="/edit-device-type-modal">Edit</a></td>
-          <td><a routerLink="/delete-device-type-modal">Delete</a></td>
+          <td><button class="btn btn-danger" (click)="openModal(deletetype)" style="margin: 2px; width: 30%;">Delete</button></td>
         </tr>
         <tr>
           <td>Ime</td>
           <td>Opis</td>
           <td><a routerLink="/edit-device-type-modal">Edit</a></td>
-          <td><a routerLink="/delete-device-type-modal">Delete</a></td>
+          <td><button class="btn btn-danger" (click)="openModal(deletetype)" style="margin: 2px; width: 30%;">Delete</button></td>
         </tr>
       </tbody>
     </table>
@@ -71,3 +71,19 @@
 
 
 </div>
+
+<ng-template #deletetype>
+    <div class="modal-header">
+      <h4 class="modal-title pull-left">Delete device type</h4>
+      <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      Are you sure you want to delete this item?
+      <div class="btn-toolbar">
+    <button type="button" class="btn btn-danger" style="float:right;" (click)="modalRef.hide()">Cancel</button>
+    <button type="submit" class="btn btn-success" style="float:right;"> Yes</button>
+  </div>
+  </div>
+  </ng-template>
